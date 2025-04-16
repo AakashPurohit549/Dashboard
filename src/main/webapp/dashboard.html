@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.2/Chart.min.js"></script>
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+	crossorigin="anonymous">
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<script
+	src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+	integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+	crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="style.css">
+<title>Dashboard</title>
+</head>
+
+
+
+<body class="sidebar-mini sidebar-open" style="height: auto">
+	<div min-height:100%;>
+
+		<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+			<div class="container-fluid">
+				<!-- Sidebar toggle button (only visible on mobile) -->
+				<!-- <button class="btn btn-outline-light me-2 d-lg-none" onclick="toggleSidebar()">
+			<i class="bi bi-list"></i> -->
+				</button>
+				<a class="navbar-brand" href="#">AdminLTE</a>
+				<button class="btn btn-outline-light me-2" onclick="toggleSidebar()">
+					<i class="bi bi-list"></i>
+				</button>
+
+				<!-- Navbar toggler -->
+				<button class="navbar-toggler" type="button"
+					data-bs-toggle="collapse" data-bs-target="#navbarNav">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<!-- Navbar links -->
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav ms-auto">
+						<li class="nav-item"><a class="nav-link active" href="#">Products</a></li>
+						<li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+						<li class="nav-item"><a class="nav-link" href="#">About
+								Us</a></li>
+						<li class="nav-item d-flex align-items-center"><img
+							src="images/istockphoto-1.jpg" class="rounded-circle mx-2"
+							width="40" height="40" alt="Profile"> <span
+							class="text-white">Alexander Pierce</span></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+
+
+		<div class="sidebar bg-dark text-white" id="sidebar">
+			<div class="card bg-dark text-white">
+				<div class="card-body p-1 m-1">
+					<img src="images/istockphoto-1.jpg" class="rounded-circle mx-2"
+						width="40" height="40" alt="Profile"> <strong class="mb-1">Alexander Pierce</strong>
+					<div>
+						<form class="d-flex mt-2 p-1">
+							<input type="text" class="form-control me-2 bg-dark" style="background-color: #3f474e;"
+								placeholder="Search..."> <i class="bi bi-search"
+								style="font-size: 18px; padding: 8px;"></i>
+						</form>
+					</div>
+				</div>
+			</div>
+
+			<div class="list">
+				<ul style="list-style-type: none; margin: 10px; padding: 10px;">
+					<div class="dropdown">
+					<button class="btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+						<i class="bi bi-speedometer2 m-1 p-1"></i> Dashboard<i class="bi bi-chevron-left"></i></button>
+						<!-- <button class="btn btn-secondary dropdown-toggle" type="button"
+							id="dropdownMenuButton" data-bs-toggle="dropdown"
+							aria-expanded="false"></button>-->
+							<div class="collapse" id="collapseExample">
+						<ul>
+							<li class="mt-3"><a>Dashboard v1</a></li>
+							<li class="mt-3"><a>Dashboard v2</a></li>
+						</ul>
+						</div>
+						</div>
+					<li class="m-1 p-2"><i class="bi bi-front"></i> Layout
+						Options</li>
+					<li class="m-1 p-2"><i class="bi bi-grid-3x3-gap-fill"></i> Widgets</li>
+					<li class="m-1 p-2"><i class="bi bi-pie-chart-fill"></i> Charts</li>
+					<li class="m-1 p-2"><i class="bi bi-tree-fill"></i> UI Elements</li>
+				</ul>
+			</div>
+		</div>
+
+
+		<!-- Offcanvas Menu (Optional, for mobile dropdown) -->
+		<div class="offcanvas offcanvas-start" tabindex="-1"
+			id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+			<div class="offcanvas-header">
+				<h5 class="offcanvas-title" id="offcanvasExampleLabel">Menu</h5>
+				<button type="button" class="btn-close text-reset"
+					data-bs-dismiss="offcanvas" aria-label="Close"></button>
+			</div>
+
+		</div>
+
+		<div class="content-wrapper" style="min-height: 875px">
+			<section class="content p-2">
+				<div class="container-fluid">
+
+					<div class="row" style="margin-top: 55px;">
+						<div class="col-12 col-sm-6 col-md-3">
+							<h1>Dashboard v2</h1>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-12 col-sm-6 col-md-3 ">
+							<div
+								style="display: flex; min-height: 80px; box-shadow: 0 0 1px rgba(0, 0, 0, .125), 0 1px 3px rgba(0, 0, 0, .2); margin-bottom: 10px; border: 1px solid rgba(0, 0, 0, .125); border-radius: 5px; position: reltaive; width: 100%">
+
+								<span
+									style="display: flex; justify-content: center; text-align: center; width: 80px; font-size: 30px; padding-top: 20px; background-color: #17a2b8;">
+									<i class="bi bi-gear"
+									style="color: white; text-align: center; height: 40px; width: 40px;"></i>
+								</span>
+
+								<div
+									style="display: flex; flex-direction: column; flex: 1; padding: 5px 10px; overflow: hidden; align-items: left;">
+									<div class="card-title">CPU Traffic</div>
+									<span class="mt-1"><b>10%</b></span>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-12 col-sm-6 col-md-3">
+							<div
+								style="display: flex; min-height: 80px; box-shadow: 0 0 1px rgba(0, 0, 0, .125), 0 1px 3px rgba(0, 0, 0, .2); margin-bottom: 10px; border: 1px solid rgba(0, 0, 0, .125); border-radius: 5px; position: reltaive; width: 100%">
+
+								<span
+									style="display: flex; justify-content: center; text-align: center; width: 80px; font-size: 30px; padding-top: 20px; background-color: #dc3545;">
+									<i class="bi bi-hand-thumbs-up"
+									style="color: white; text-align: center; height: 40px; width: 40px;"></i>
+								</span>
+
+								<div
+									style="display: flex; flex-direction: column; flex: 1; padding: 5px 10px; overflow: hidden; align-items: left;">
+									<div class="card-title ">Likes</div>
+									<span class="mt-1"><b>41,410</b></span>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-12 col-sm-6 col-md-3">
+							<div
+								style="display: flex; min-height: 80px; box-shadow: 0 0 1px rgba(0, 0, 0, .125), 0 1px 3px rgba(0, 0, 0, .2); margin-bottom: 10px; border: 1px solid rgba(0, 0, 0, .125); border-radius: 5px; position: reltaive; width: 100%">
+
+								<span
+									style="display: flex; justify-content: center; text-align: center; width: 80px; font-size: 30px; padding-top: 20px; background-color: #28a745;">
+									<i class="bi bi-cart"
+									style="color: white; text-align: center; height: 40px; width: 40px;"></i>
+								</span>
+
+								<div
+									style="display: flex; flex-direction: column; flex: 1; padding: 5px 10px; overflow: hidden; align-items: left;">
+									<div class="card-title ">Sales</div>
+									<span class="mt-1"><b>760</b></span>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="col-12 col-sm-6 col-md-3">
+							<div
+								style="display: flex; min-height: 80px; box-shadow: 0 0 1px rgba(0, 0, 0, .125), 0 1px 3px rgba(0, 0, 0, .2); margin-bottom: 10px; border: 1px solid rgba(0, 0, 0, .125); border-radius: 5px; position: reltaive; width: 100%">
+
+								<span
+									style="display: flex; justify-content: center; text-align: center; width: 80px; font-size: 30px; padding-top: 20px; background-color: #ffc107;">
+									<i class="bi bi-people-fill"
+									style="color: black; text-align: center; height: 40px; width: 40px;"></i>
+								</span>
+
+								<div
+									style="display: flex; flex-direction: column; flex: 1; padding: 5px 10px; overflow: hidden; align-items: left;">
+									<div class="card-title ">New Members</div>
+									<span class="mt-1"><b>2,000</b></span>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="row ">
+						<div class="col-md-4">
+							<div class="card card-primary card-outline"
+								style="box-shadow: 0 0 1px rgba(0, 0, 0, .125), 0 1px 3px rgba(0, 0, 0, .2);">
+								<div class="card-header"
+									style="display: grid; grid-template-columns: auto auto; background-color: white;">
+									<div class="card-title"
+										style="grid-column-start: 1; grid-column-end: 2;">
+										<b>Direct Chat</b>
+									</div>
+									<div class="card-tools" style="text-align: right;">
+										<span class="badge border-rounded bg-warning">3</span>
+										<button type="button" class="btn btn-tool "
+											data-bs-toggle="collapse" data-bs-target="#directChat">
+											<i class="bi bi-dash"></i>
+										</button>
+										<button type="button" class="btn btn-tool"
+											data-bs-dismiss="card">
+											<i class="bi bi-x"></i>
+										</button>
+									</div>
+								</div>
+								
+								<div class="collapse show" id="directChat">
+									<div class="card-body p-1" style="max-height: 250px;">
+										<div class="direct-chat-messages"
+											style="max-height: 250px; overflow-y: scroll;">
+											<div class="d-flex mb-3">
+												<img class="rounded-circle me-2"
+													src="images/istockphoto-2.jpg" width="40" height="40"
+													alt="User">
+												<div>
+													<div>
+														<strong>Alexander Pierce</strong> <small
+															class="text-muted" style="float: right;">23 Jan
+															2:00 pm</small>
+													</div>
+													<div class="card p-2" style="background-color: #96a2ad; border:1px solid  #96a2ad;">Hello,
+														Good Morning, the weather is so plesant today</div>
+												</div>
+											</div>
+											<div class="d-flex justify-content-end mb-3">
+												<div class="text-end">
+													<div>
+														<strong>You</strong> <small class="text-muted"
+															style="float: left;">23 Jan 2:05 pm</small>
+													</div>
+													<div class="card p-2" style=" border:1px solid #ffc107; background-color: #ffc107;">Hi!
+														I got your message. length of the message checking how
+														much spaces i occupies in the card</div>
+												</div>
+												<img class="rounded-circle ms-2"
+													src="images/istockphoto-5.jpg" width="40" height="40"
+													alt="User">
+											</div>
+											<div class="d-flex mb-3">
+												<img class="rounded-circle me-2"
+													src="images/istockphoto-2.jpg" width="40" height="40"
+													alt="User">
+												<div>
+													<div>
+														<strong>Alexander Pierce</strong><small class="text-muted"
+															style="float: right;">23 Jan 2:00 pm</small>
+													</div>
+													<div class="card p-2" style=" border:1px solid  #96a2ad; background-color: #96a2ad">Hello,
+														welcome to the world of programming .</div>
+												</div>
+											</div>
+											<div class="d-flex justify-content-end mb-3">
+												<div class="text-end">
+													<div>
+														<strong>You</strong> <small class="text-muted"
+															style="float: left;">23 Jan 2:05 pm</small>
+													</div>
+													<div class="card p-2" style=" border:1px solid #ffc107; background-color: #ffc107;">Hi!
+														I got your message. length of the message checking how
+														much spaces i occupies in the card</div>
+												</div>
+												<img class="rounded-circle ms-2"
+													src="images/istockphoto-5.jpg" width="40" height="40"
+													alt="User">
+											</div>
+											<div class="d-flex mb-3">
+												<img class="rounded-circle me-2"
+													src="images/istockphoto-2.jpg" width="40" height="40"
+													alt="User">
+												<div>
+													<div>
+														<strong>Alexander Pierce</strong><small class="text-muted"
+															style="float: right;">23 Jan 2:00 pm</small>
+													</div>
+													<div class="card p-2" style=" border:1px solid  #96a2ad; background-color: #96a2ad">Hello,
+														dashboard for monitoring and management.</div>
+												</div>
+											</div>
+											<div class="d-flex justify-content-end mb-3">
+												<div class="text-end">
+													<div>
+														<strong>You</strong> <small class="text-muted"
+															style="float: left;">23 Jan 2:05 pm</small>
+													</div>
+													<div class="card p-2" style=" border:1px solid #ffc107; background-color: #ffc107;">Hi!
+														I got your message. length of the message checking how
+														much spaces i ocupies in the card</div>
+												</div>
+												<img class="rounded-circle ms-2" style="border-radius: 50%;"
+													src="images/istockphoto-5.jpg" width="40" height="40"
+													alt="User">
+											</div>
+
+										</div>
+									</div>
+									<div class="card-footer">
+										<form class="d-flex">
+											<input type="text" class="form-control me-2"
+												placeholder="Type Message...">
+											<button type="submit" class="btn"
+												style="background-color: #ffc107">Send</button>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="col-md-4">
+						<div class="card"
+								style="box-shadow: 0 0 1px rgba(0, 0, 0, .125), 0 1px 3px rgba(0, 0, 0, .2);">
+								<div class="card-header"
+									style="display: grid; grid-template-columns: auto auto; background-color: white;">
+									<div class="card-title"
+										style="grid-column-start: 1; grid-column-end: 2;">
+										<b>Latest Members</b>
+									</div>
+									<div class="card-tools" style="text-align: right;">
+										<span class="badge bg-danger">8 New Members</span>
+										<button type="button" class="btn btn-tool "
+											data-bs-toggle="collapse" data-bs-target="#latestMembers">
+											<i class="bi bi-dash"></i>
+										</button>
+										<button type="button" class="btn btn-tool"
+											data-bs-dismiss="card">
+											<i class="bi bi-x"></i>
+										</button>
+									</div>
+								</div>
+
+
+                            <div class="collapse show" id="latestMembers">
+								<div class="card-body p-0">
+									<ul style="padding: 0px; list-style-type: none;">
+										<li
+											style="width: 25%; float: left; padding: 10px; text-align: center;">
+											<img src="images/istockphoto-8.jpg"
+											class="rounded-circle mr-1" alt="Chris Wood" width="80"
+											height="80">
+											<div>
+												<b>Nora</b>
+											</div> <small class="text-muted m-3"> Today</small>
+										</li>
+										<li
+											style="width: 25%; float: left; padding: 10px; text-align: center;">
+											<img src="images/istockphoto-1.jpg"
+											class="rounded-circle mr-1" alt="Chris Wood" width="80"
+											height="80">
+
+											<div class=" card-text m-0">
+												<b>Alexander</b>
+											</div> <small class="text-muted m-3">Yesterday</small>
+										</li>
+										<li
+											style="width: 25%; float: left; padding: 10px; text-align: center;">
+											<img src="images/istockphoto-2.jpg"
+											class="rounded-circle mr-1" alt="Chris Wood" width="80"
+											height="80">
+
+											<div class="card-text m-0">
+												<b>Norman</b>
+											</div> <small class="text-muted m-3"> 12 Jan</small>
+										</li>
+										<li
+											style="width: 25%; float: left; padding: 10px; text-align: center;">
+											<img src="images/istockphoto-3.jpg"
+											class="rounded-circle mr-1" alt="Chris Wood" width="80"
+											height="80">
+
+											<div class=" card-text m-0">
+												<b>Jhon</b>
+											</div> <small class="text-muted m-3"> 12 Jan</small>
+										</li>
+										<li
+											style="width: 25%; float: left; padding: 10px; text-align: center;">
+											<img src="images/istockphoto-4.jpg"
+											class="rounded-circle mr-1" alt="Chris Wood" width="80"
+											height="80">
+
+											<div class=" card-text m-0">
+												<b>Sarah</b>
+											</div> <small class="text-muted m-3"> 13 Jan</small>
+										</li>
+										<li
+											style="width: 25%; float: left; padding: 10px; text-align: center;">
+											<img src="images/istockphoto-5.jpg"
+											class="rounded-circle mr-1" alt="Chris Wood" width="80"
+											height="80">
+
+											<div class=" card-text m-0">
+												<b>Jane</b>
+											</div> <small class="text-muted m-3"> 14 Jan</small>
+										</li>
+										<li
+											style="width: 25%; float: left; padding: 10px; text-align: center;">
+											<img src="images/istockphoto-1.jpg"
+											class="rounded-circle mr-1" alt="Chris Wood" width="80"
+											height="80">
+
+											<div class=" card-text m-0">
+												<b>Alexander</b>
+											</div> <small class="text-muted m-3"> 15 Jan</small>
+										</li>
+										<li
+											style="width: 25%; float: left; padding: 10px; text-align: center;">
+											<img src="images/istockphoto-8.jpg"
+											class="rounded-circle mr-1" alt="Chris Wood" width="80"
+											height="80">
+
+											<div class=" card-text m-0">
+												<b>Nadia</b>
+											</div> <small class="text-muted m-3"> 15 Jan</small>
+										</li>
+									</ul>
+								</div>
+								</div>
+							</div>
+						
+						</div>
+						<div class="col-md-4">
+						
+
+							<h5 class="text-centerd">Goal Completion</h5>
+							<div>
+								<span class="m-0"><b>Add Products to cart</b></span> <span
+									style="float: right;"><b>160/200</b></span>
+								<div class="progress" role="progressbar"
+									aria-label="Success example" aria-valuenow="25"
+									aria-valuemin="0" aria-valuemax="100" style="height: 25px">
+									<div class="progress-bar bg-success" style="width: 25%"></div>
+								</div>
+							</div>
+							<div class="mt-3">
+								<span class="mt-3"><b>Complete Purchase</b></span> <span
+									style="float: right;"><b>310/400</b></span>
+
+								<div class="progress " role="progressbar"
+									aria-label="Info example" aria-valuenow="50" aria-valuemin="0"
+									aria-valuemax="100" style="height: 25px;">
+									<div class="progress-bar bg-info text-dark" style="width: 50%"></div>
+								</div>
+							</div>
+
+							<div class="mt-3">
+								<span class="mt-3"><b>Visit Premium Page</b></span> <span
+									style="float: right;"><b>480/800</b></span>
+
+								<div class="progress  " role="progressbar"
+									aria-label="Warning example" aria-valuenow="75"
+									aria-valuemin="0" aria-valuemax="100" style="height: 25px;">
+									<div class="progress-bar bg-warning text-dark"
+										style="width: 75%"></div>
+								</div>
+							</div>
+
+							<div class="mt-3 ">
+								<span class="mt-4"><b>Send Inquiries</b></span> <span
+									style="float: right;"><b>250/500</b></span>
+
+								<div class="progress" role="progressbar"
+									aria-label="Danger eample" aria-valuenow="100"
+									aria-valuemin="0" aria-valuemax="100" style="height: 25px;">
+									<div class="progress-bar bg-danger" style="width: 100%"></div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+
+					<div class="row g-2 m-0">
+						<div class="col-md-8">
+						<div class="card"
+								style="box-shadow: 0 0 1px rgba(0, 0, 0, .125), 0 1px 3px rgba(0, 0, 0, .2);"
+								style="border-top-color: rgb(0, 110, 255); border-top: 15x;">
+
+								<div class="card-header"
+									style="display: grid; grid-template-columns: auto auto; background-color: white;">
+									<div class="card-title"
+										style="grid-column-start: 1; grid-column-end: 2;">
+										<b>Recently Added Usage</b>
+									</div>
+									<div class="card-tools" style="text-align: right;">
+										<button type="button" class="btn btn-tool "
+											data-bs-toggle="collapse" data-bs-target="">
+											<i class="bi bi-dash"></i>
+										</button>
+										<button type="button" class="btn btn-tool"
+											data-bs-dismiss="card">
+											<i class="bi bi-x"></i>
+										</button>
+									</div>
+								</div>
+
+								<div class="card">
+									<div class="row g-0">
+										<div class="col-md-4 p-0"
+											style="text-align: center; max-width: 100px;">
+											<img src="images/tv.jpg" class="img-fluid " alt="..."
+												width="50" height="50"
+												style="padding-top: 12px; padding-bottom: 12px;">
+										</div>
+										<div class="col-md-8">
+											<div>
+												<div class="card-body p-1">
+													<h5 class="card-title text-primary">Samsung Tv</h5>
+													<span
+														class="position-absolute top-0 end-0 mt-2 me-2 badge bg-warning">$1800</span>
+													<div class="card-text">Samsung 32" 1080p 60Hz LED
+														Smart HDTV</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+
+
+								<div class="card">
+									<div class="row g-0">
+										<div class="col-md-4 p-0"
+											style="text-align: center; max-width: 100px;">
+											<img src="images/bicycle.jpg" class="img-fluid " alt="..."
+												width="50" height="50"
+												style="padding-top: 12px; padding-bottom: 12px;">
+										</div>
+										<div class="col-md-8">
+											<div>
+												<div class="card-body p-1">
+													<h5 class="card-title text-primary">Bicycle</h5>
+													<span
+														class="position-absolute top-0 end-0 mt-2 me-2 badge bg-primary">$700</span>
+													<div class="card-text">26" Mongoose Dolomite Men's
+														7-Speed Navy Blue</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+
+								<div class="card">
+									<div class="row g-0">
+										<div class="col-md-4 p-0"
+											style="text-align: center; max-width: 100px;">
+											<img src="images/xbox.jpg" class="img-fluid " alt="..."
+												width="50" height="50"
+												style="padding-top: 12px; padding-bottom: 12px;">
+										</div>
+										<div class="col-md-8">
+											<div>
+												<div class="card-body p-1">
+													<h5 class="card-title text-primary">Xbox One</h5>
+													<span
+														class="position-absolute top-0 end-0 mt-2 me-2 badge bg-danger">$200</span>
+													<div class="card-text">Xbox One Console Bundle with
+														Halo Chief</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+
+								<div class="card">
+									<div class="row g-0">
+										<div class="col-md-4 p-0"
+											style="text-align: center; max-width: 100px;">
+											<img src="images/ps4.jpg" class="img-fluid " alt="..."
+												width="50" height="50"
+												style="padding-top: 12px; padding-bottom: 12px;">
+										</div>
+										<div class="col-md-8">
+											<div>
+												<div class="card-body p-1">
+													<h5 class="card-title text-primary">PlayStation 4</h5>
+													<span
+														class="position-absolute top-0 end-0 mt-2 me-2 badge bg-success">$399</span>
+													<div class="card-text">PlayStation 4 (500GB) Console
+														PS4</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+								</div>
+								<button class="btn">
+									<a class="text-primary" style="text-decoration: none;">View
+										All Products</a>
+								</button>
+							</div>	
+						</div>
+
+
+						<div class="col-md-4">
+							<div
+								style="box-shadow: 0 0 1px rgba(0, 0, 0, .125), 0 1px 3px rgba(0, 0, 0, .2); display: flex; min-height: 80px; border: 1px solid rgba(0, 0, 0, .125); border-radius: 5px; margin-bottom: 10px; margin-top: 10px; position: reltaive; width: 100%">
+
+								<span
+									style="display: flex; justify-content: center; text-align: center; width: 80px; font-size: 30px; padding-top: 20px; background-color: #ffc107;">
+									<i class="bi bi-tag"
+									style="text-align: center; height: 40px; width: 40px;"></i>
+								</span>
+
+								<div
+									style="display: flex; flex-direction: column; flex: 1; padding: 5px 10px; overflow: hidden; background-color: #ffc107; align-items: left;">
+									<div class="card-title mt-2">INVENTORY</div>
+									<span><b>5,200</b></span>
+								</div>
+							</div>
+
+							<div
+								style="display: flex; border: 1px solid rgba(0, 0, 0, .125); border-radius: 5px; margin-bottom: 10px; box-shadow: 0 0 1px rgba(0, 0, 0, .125), 0 1px 3px rgba(0, 0, 0, .2); min-height: 80px; position: reltaive; width: 100%">
+
+								<span
+									style="display: flex; justify-content: center; text-align: center; width: 80px; font-size: 30px; padding-top: 20px; background-color: #28a745;">
+									<i class="bi bi-heart"
+									style="color: white; text-align: center; height: 30px; width: 30px;"></i>
+								</span>
+
+								<div
+									style="display: flex; flex-direction: column; flex: 1; padding: 5px 10px; overflow: hidden; background-color: #28a745; align-items: left;">
+									<div class="card-title text-white mt-2">MENTIONS</div>
+									<span class="text-white "><b>92,200</b></span>
+								</div>
+							</div>
+
+							<div
+								style="box-shadow: 0 0 1px rgba(0, 0, 0, .125), 0 1px 3px rgba(0, 0, 0, .2); display: flex; min-height: 80px; border: 1px solid rgba(0, 0, 0, .125); border-radius: 5px; margin-bottom: 10px; position: reltaive; width: 100%">
+
+								<span
+									style="display: flex; justify-content: center; text-align: center; width: 80px; font-size: 30px; padding-top: 20px; background-color: #dc3545;">
+									<i class="bi bi-cloud-arrow-down-fill"
+									style="color: white; text-align: center; height: 30px; width: 30px;"></i>
+								</span>
+
+								<div
+									style="display: flex; flex-direction: column; flex: 1; padding: 5px 10px; overflow: hidden; background-color: #dc3545; align-items: left;">
+									<div class="card-title text-white mt-2">DOWNLOADS</div>
+									<span class="text-white  "><b>144,381</b></span>
+								</div>
+							</div>
+
+							<div
+								style="box-shadow: 0 0 1px rgba(0, 0, 0, .125), 0 1px 3px rgba(0, 0, 0, .2); display: flex; min-height: 80px; border: 1px solid rgba(0, 0, 0, .125); border-radius: 5px; margin-bottom: 10px; position: reltaive; width: 100%">
+
+								<span
+									style="display: flex; justify-content: center; text-align: center; width: 80px; font-size: 30px; padding-top: 20px; background-color: #17a2b8;">
+									<i class="bi bi-chat"
+									style="color: white; text-align: center; height: 30px; width: 30px;"></i>
+								</span>
+
+								<div
+									style="display: flex; flex-direction: column; flex: 1; padding: 5px 10px; overflow: hidden; background-color: #17a2b8; align-items: left;">
+									<div class="card-title text-white mt-2">DIRECT MESSAGES</div>
+									<span class="text-white  "><b>163,921</b></span>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="row g-1 mt-0">
+						<div class="col-sm-8">
+							<div class="card"
+								style="box-shadow: 0 0 1px rgba(0, 0, 0, .125), 0 1px 3px rgba(0, 0, 0, .2);">
+								<h6 class="p-2 m-1"
+									style="background-color: white; font-size: 22px;">
+									<b>Latest Orders</b>
+								</h6>
+								<div class="card-body ps-2">
+									<div class="table-responsive"
+										style="display: block; margin-bottom: 0px; width: 100%; overflow-x: auto;">
+										<table>
+											<thead>
+												<tr>
+													<td><b>Order ID</b></td>
+													<td><b>Item</b></td>
+													<td><b>Status</b></td>
+													<td><b>Popularity</b></td>
+												</tr>
+											</thead>
+											<tbody>
+
+												<tr>
+													<td class="text-primary">OR9842</td>
+													<td>Call of Duty</td>
+														<td><span class="badge bg-success">Shipped</span></td>
+													<td><i class="bi bi-bar-chart" style="color: green"></i></td>
+												
+												</tr>
+
+												<tr>
+													<td class="text-primary">OR985</td>
+													<td>Samsung Smart TV</td>
+														<td><span class="badge bg-danger">Delivered</span></td>
+													<td><i class="bi bi-bar-chart" style="color: orange"></i>
+													</td>
+												</tr>
+
+
+
+												<tr>
+													<td class="text-primary">OR9877</td>
+													<td>Iphone 16</td>
+														<td><span class="badge bg-warning">Pending</span></td>
+													<td><i class="bi bi-bar-chart" style="color: red"></i></td>
+												</tr>
+
+												<tr>
+													<td class="text-primary">OR956</td>
+													<td>PlayStation 5</td>
+														<td><span class="badge bg-danger">Delivered</span></td>
+													<td><i class="bi bi-bar-chart" style="color: blue"></i></td>
+												</tr>
+
+												<tr>
+													<td class="text-primary">OR989</td>
+													<td>Lenovo ThinkPad</td>
+														<td><span class="badge bg-success">Shipped</span></td>
+													<td><div class="icongrid">
+													    <div class="myicongreenbg"></div>
+													    <div class="myicongreen"></div>
+													    <div class="myiconredsm"></div>
+													    </div>
+													    
+													
+													</td>
+												</tr>
+											</tbody>
+										</table>
+										<div class="card-footer bg-white ps-0 pe-0 pb-0">
+											<button class="btn btn-primary">
+												<a>Place New Order</a>
+											</button>
+											<button class="btn btn-secondary" style="float: right;">
+												<a>View All Products</a>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+</body>
+<script>
+	function toggleSidebar() {
+		const sidebar = document.getElementById('sidebar');
+		const content = document.getElementById('mainContent');
+		sidebar.classList.toggle('show');
+		content.classList.toggle('shifted');
+	}
+</script>
+
+
+
+</html>
