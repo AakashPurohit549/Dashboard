@@ -51,7 +51,12 @@ td,th{
 	padding:2px;
 }
 
-
+#icons{
+	color:white; 
+	font-size:24px; 
+	margin:10px; 
+	padding:10px;
+}
 .sidebar {
 	width: 250px;
 	background-color: #343a40;
@@ -84,10 +89,3 @@ td,th{
 }
 
 
-
-								
-								
-						
-										
-
-					
