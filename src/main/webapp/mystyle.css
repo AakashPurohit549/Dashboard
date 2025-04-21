@@ -1,0 +1,135 @@
+@charset "UTF-8";
+table, td , th {
+	  text-align: left;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,th{
+	border-bottom:1px solid;
+	padding:15px;
+	
+}
+
+.topcard{
+	display: flex; 
+	min-height: 80px; 
+	box-shadow: 0 0 1px rgba(0, 0, 0, .125), 0 1px 3px rgba(0, 0, 0, .2); 
+	margin-bottom: 10px; border: 1px solid rgba(0, 0, 0, .125); 
+	border-radius: 5px; 
+	position: reltaive; 
+	width: 100%
+}
+
+.topcard-text{
+	display: flex; 
+	flex-direction: column; 
+	flex: 1; 
+	padding: 5px 10px; 
+	overflow: hidden;
+	 align-items: left;
+}
+
+.topcard-first {
+	display: flex; 
+	justify-content: center; 
+	text-align: center; 
+	width: 80px; 
+	font-size: 30px; 
+	padding-top: 20px; 
+	background-color: #17a2b8;
+}
+
+.imgdiv{
+	width: 25%; 
+	float: left; 
+	padding: 10px; 
+	text-align: center;
+}
+
+.icongrid{
+  display: grid;
+  grid-template-columns:8px 8px 8px 8px 8px 8px;
+}
+
+.myiconredbg{
+	height:18px;
+	width:6px;
+	background-color:red;
+	margin:2px;
+	padding:4px;
+}
+
+.myiconredsm{
+	height:12px;
+	width:6px;
+	background-color:red;
+	margin:2px;
+	padding:2px;
+}
+
+.myicongreen{
+	height:12px;
+	width:6px;
+	background-color:green;
+	margin:2px;
+	padding:2px;
+}
+
+.myicongreenin{
+	height:12px;
+	width:6px;
+	background-color:green;
+	margin:4px;
+	padding:4px;
+}
+
+.myicongreenbg{
+	height:14px;
+	width:6px;
+	background-color:green;
+	margin:2px;
+	padding:2px;
+}
+
+#icons{
+	color:white; 
+	font-size:24px; 
+	margin:10px; 
+	padding:10px;
+}
+.sidebar {
+	width: 250px;
+	background-color: #343a40;
+	position: fixed;
+	top: 56px;
+	left: -250px;
+	height: 100vh;
+	padding-top: 1rem;
+	z-index: 1040;
+	transition: left 0.3s ease-in-out;
+}
+
+.sidebar.show {
+	left: 0;
+}
+
+.content {
+	margin-left: 0;
+	transition: margin-left 0.3s ease-in-out;
+}
+
+.content.shifted {
+	margin-left: 250px;
+}
+
+@media ( max-width : 768px) {
+	.sidebar {
+		top: 56px;
+	}
+}
+
+
