@@ -43,11 +43,27 @@ td,th{
 	background-color: #17a2b8;
 }
 
+.imgcontainer{
+	display: grid;
+    grid-template-columns:25% 25% 25% 25%; 
+    gap: 5px; 
+	overflow:hidden;
+}
+
+.card-container{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 10px; 
+}
+
+
 .imgdiv{
-	width: 25%; 
+	width: 100%; 
+	height:auto;
 	float: left; 
-	padding: 10px; 
-	text-align: center;
+	text-align:center;
+	padding: 5px;
 }
 
 .icongrid{
