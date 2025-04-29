@@ -2,8 +2,7 @@
 <html>
 
 <head>
-<script
-	src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.2/Chart.min.js"></script>
+
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
 	rel="stylesheet"
@@ -24,7 +23,7 @@
 
 
 
-<body class="sidebar-mini sidebar-open" style="height: auto">
+<body class="sidebar-mini sidebar-open" >
 	<div>
 
 		<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
@@ -71,15 +70,16 @@
 					<div>
 						<form class="d-flex mt-2 p-1">
 							<input type="text" class="form-control me-2 bg-dark"
-								style="background-color: #3f474e;" placeholder="Search...">
-							<i class="bi bi-search" style="font-size: 18px; padding: 8px;"></i>
+							class="searchbar"
+								 placeholder="Search...">
+							<i class="bi bi-search serachicondiv"></i>
 						</form>
 					</div>
 				</div>
 			</div>
 
 			<div class="list">
-				<ul style="list-style-type: none; margin: 10px; padding: 10px;">
+				<ul class="dashbardheader">
 					<div class="dropdown">
 						<button class="btn btn-dark" type="button"
 							data-bs-toggle="collapse" data-bs-target="#collapseExample"
@@ -87,9 +87,6 @@
 							<i class="bi bi-speedometer2 m-1 p-1"></i> Dashboard<i
 								class="bi bi-chevron-left"></i>
 						</button>
-						<!-- <button class="btn btn-secondary dropdown-toggle" type="button"
-							id="dropdownMenuButton" data-bs-toggle="dropdown"
-							aria-expanded="false"></button>-->
 						<div class="collapse" id="collapseExample">
 							<ul>
 								<li class="mt-3"><a>Dashboard v1</a></li>
@@ -120,11 +117,11 @@
 
 		</div>
 
-		<div class="content-wrapper" style="min-height: 875px">
+		<div class="content-wrapper">
 			<section class="content p-2">
 				<div class="container-fluid">
 
-					<div class="row" style="margin-top: 55px;">
+					<div class=" row headerrow">
 						<div class="col-12 col-sm-6 col-md-3">
 							<h1>Dashboard v2</h1>
 						</div>
@@ -134,8 +131,8 @@
 						<div class="col-12 col-sm-6 col-md-3 ">
 							<div class="topcard">
 
-								<span class="topcard-first"> <i class="bi bi-gear"
-									style="color: white; text-align: center; height: 40px; width: 40px;"></i>
+								<span class="topcard-first"> <i class="bi bi-gear statuscardsicons"
+									></i>
 								</span>
 
 								<div class="topcard-text">
@@ -147,9 +144,8 @@
 
 						<div class="col-12 col-sm-6 col-md-3">
 							<div class="topcard">
-								<span class="topcard-first" style="background-color: #dc3545;">
-									<i class="bi bi-hand-thumbs-up"
-									style="color: white; text-align: center; height: 40px; width: 40px;"></i>
+								<span class="topcard-second">
+									<i class="bi bi-hand-thumbs-up statuscardsicons"></i>
 								</span>
 
 								<div class="topcard-text">
@@ -161,9 +157,9 @@
 
 						<div class="col-12 col-sm-6 col-md-3">
 							<div class="topcard">
-								<span class="topcard-first" style="background-color: #28a745;">
-									<i class="bi bi-cart"
-									style="color: white; text-align: center; height: 40px; width: 40px;"></i>
+								<span class="topcard-third">
+									<i class="bi bi-cart statuscardsicons"
+									></i>
 								</span>
 
 								<div class="topcard-text">
@@ -176,9 +172,8 @@
 
 						<div class="col-12 col-sm-6 col-md-3">
 							<div class="topcard">
-								<span class="topcard-first" style="background-color: #ffc107;">
-									<i class="bi bi-people-fill"
-									style="color: black; text-align: center; height: 40px; width: 40px;"></i>
+								<span class="topcard-fourth">
+									<i class="bi bi-people-fill statuscardsiconslast"></i>
 								</span>
 
 								<div class="topcard-text">
@@ -192,15 +187,12 @@
 
 					<div class="row ">
 						<div class="col-md-4">
-							<div class="card card-primary card-outline"
-								style="box-shadow: 0 0 1px rgba(0, 0, 0, .125), 0 1px 3px rgba(0, 0, 0, .2);">
-								<div class="card-header"
-									style="display: grid; grid-template-columns: auto auto; background-color: white;">
-									<div class="card-title"
-										style="grid-column-start: 1; grid-column-end: 2;">
+							<div class="card card-primary card-outline chatbody">
+								<div class="card-header chatbody-header">
+									<div class="card-title chatcardtitle">
 										<b>Direct Chat</b>
 									</div>
-									<div class="card-tools" style="text-align: right;">
+									<div class="card-tools chattoptools">
 										<span class="badge border-rounded bg-warning">3</span>
 										<button type="button" class="btn btn-tool "
 											data-bs-toggle="collapse" data-bs-target="#directChat">
@@ -214,9 +206,8 @@
 								</div>
 
 								<div class="collapse show" id="directChat">
-									<div class="card-body p-1" style="max-height: 250px;">
-										<div class="direct-chat-messages"
-											style="max-height: 250px; overflow-y: scroll;">
+									<div class="card-body p-1">
+										<div class="direct-chat-messages">
 											<div class="d-flex mb-3">
 												<img class="rounded-circle me-2"
 													src="images/istockphoto-2.jpg" width="40" height="40"
@@ -224,22 +215,22 @@
 												<div>
 													<div>
 														<strong>Alexander Pierce</strong> <small
-															class="text-muted" style="float: right;">23 Jan
+															class="text-muted rightmost">23 Jan
 															2:00 pm</small>
 													</div>
-													<div class="card p-2"
-														style="background-color: #96a2ad; border: 1px solid #96a2ad;">Hello,
+													<div class="card p-2 msg-body-recieved"
+														>Hello,
 														Good Morning, the weather is so plesant today</div>
 												</div>
 											</div>
 											<div class="d-flex justify-content-end mb-3">
 												<div class="text-end">
 													<div>
-														<strong>You</strong> <small class="text-muted"
-															style="float: left;">23 Jan 2:05 pm</small>
+														<strong>You</strong> <small class="text-muted leftmost"
+															>23 Jan 2:05 pm</small>
 													</div>
-													<div class="card p-2"
-														style="border: 1px solid #ffc107; background-color: #ffc107;">Hi!
+													<div class="card p-2 msg-body-sent"
+														>Hi!
 														I got your message. length of the message checking how
 														much spaces i occupies in the card</div>
 												</div>
@@ -253,22 +244,22 @@
 													alt="User">
 												<div>
 													<div>
-														<strong>Alexander Pierce</strong><small class="text-muted"
-															style="float: right;">23 Jan 2:00 pm</small>
+														<strong>Alexander Pierce</strong><small class="text-muted rightmost"
+															>23 Jan 2:00 pm</small>
 													</div>
-													<div class="card p-2"
-														style="border: 1px solid #96a2ad; background-color: #96a2ad">Hello,
+													<div class="card p-2 msg-body-recieved"
+														>Hello,
 														welcome to the world of programming .</div>
 												</div>
 											</div>
 											<div class="d-flex justify-content-end mb-3">
 												<div class="text-end">
 													<div>
-														<strong>You</strong> <small class="text-muted"
-															style="float: left;">23 Jan 2:05 pm</small>
+														<strong>You</strong> <small class="text-muted leftmost"
+															>23 Jan 2:05 pm</small>
 													</div>
-													<div class="card p-2"
-														style="border: 1px solid #ffc107; background-color: #ffc107;">Hi!
+													<div class="card p-2 msg-body-sent"
+													 >Hi!
 														I got your message. length of the message checking how
 														much spaces i occupies in the card</div>
 												</div>
@@ -282,26 +273,26 @@
 													alt="User">
 												<div>
 													<div>
-														<strong>Alexander Pierce</strong><small class="text-muted"
-															style="float: right;">23 Jan 2:00 pm</small>
+														<strong>Alexander Pierce</strong><small class="text-muted rightmost"
+															>23 Jan 2:00 pm</small>
 													</div>
-													<div class="card p-2"
-														style="border: 1px solid #96a2ad; background-color: #96a2ad">Hello,
+													<div class="card p-2 msg-body-recieved"
+														>Hello,
 														dashboard for monitoring and management.</div>
 												</div>
 											</div>
 											<div class="d-flex justify-content-end mb-3">
 												<div class="text-end">
 													<div>
-														<strong>You</strong> <small class="text-muted"
-															style="float: left;">23 Jan 2:05 pm</small>
+														<strong>You</strong> <small class="text-muted leftmost"
+															>23 Jan 2:05 pm</small>
 													</div>
-													<div class="card p-2"
-														style="border: 1px solid #ffc107; background-color: #ffc107;">Hi!
+													<div class="card p-2 msg-body-sent"
+														>Hi!
 														I got your message. length of the message checking how
 														much spaces i ocupies in the card</div>
 												</div>
-												<img class="rounded-circle ms-2" style="border-radius: 50%;"
+												<img class="rounded-circle ms-2"
 													src="images/istockphoto-5.jpg" width="40" height="40"
 													alt="User">
 											</div>
@@ -312,8 +303,8 @@
 										<form class="d-flex">
 											<input type="text" class="form-control me-2"
 												placeholder="Type Message...">
-											<button type="submit" class="btn"
-												style="background-color: #ffc107">Send</button>
+											<button type="submit" class="btn msg-sent-btn"
+												>Send</button>
 										</form>
 									</div>
 								</div>
@@ -321,15 +312,12 @@
 						</div>
 
 						<div class="col-md-4">
-							<div class="card"
-								style="box-shadow: 0 0 1px rgba(0, 0, 0, .125), 0 1px 3px rgba(0, 0, 0, .2);">
-								<div class="card-header"
-									style="display: grid; grid-template-columns: auto auto; background-color: white;">
-									<div class="card-title"
-										style="grid-column-start: 1; grid-column-end: 2;">
+							<div class="card memberscard">
+								<div class="card-header memebercardheader">
+									<div class="card-title">
 										<b>Latest Members</b>
 									</div>
-									<div class="card-tools" style="text-align: right;">
+									<div class="card-tools cardtools">
 										<span class="badge bg-danger">8 New Members</span>
 										<button type="button" class="btn btn-tool "
 											data-bs-toggle="collapse" data-bs-target="#latestMembers">
@@ -422,9 +410,9 @@
 										</div>
 									</div>
 								</div>
-								<div style="text-align:center; border-top:1px solid rgba(0, 0, 0, .125)">
+								<div class=membersviewallbtn>
 										<button class="btn">
-									<a class="text-primary" style="text-decoration: none;">View
+									<a class="text-primary viewallbutton">View
 										All Members</a>
 								</button>
 										</div>
@@ -437,44 +425,43 @@
 							<h5 class="text-centerd">Goal Completion</h5>
 							<div>
 								<span class="m-0"><b>Add Products to cart</b></span> <span
-									style="float: right;"><b>160/200</b></span>
-								<div class="progress" role="progressbar"
+									class="rightmost"><b>160/200</b></span>
+								<div class="progress progresbarheight" role="progressbar"
 									aria-label="Success example" aria-valuenow="25"
-									aria-valuemin="0" aria-valuemax="100" style="height: 25px">
-									<div class="progress-bar bg-success" style="width: 25%"></div>
+									aria-valuemin="0" aria-valuemax="100">
+									<div class="progress-bar bg-success progresvalue1"></div>
 								</div>
 							</div>
 							<div class="mt-3">
 								<span class="mt-3"><b>Complete Purchase</b></span> <span
-									style="float: right;"><b>310/400</b></span>
+									class="rightmost"><b>310/400</b></span>
 
-								<div class="progress " role="progressbar"
+								<div class="progress progresbarheight" role="progressbar"
 									aria-label="Info example" aria-valuenow="50" aria-valuemin="0"
-									aria-valuemax="100" style="height: 25px;">
-									<div class="progress-bar bg-info text-dark" style="width: 50%"></div>
+									aria-valuemax="100">
+									<div class="progress-bar bg-info text-dark progresvalue2" ></div>
 								</div>
 							</div>
 
 							<div class="mt-3">
 								<span class="mt-3"><b>Visit Premium Page</b></span> <span
-									style="float: right;"><b>480/800</b></span>
+									class="rightmost"><b>480/800</b></span>
 
-								<div class="progress  " role="progressbar"
+								<div class="progress progresbarheight " role="progressbar"
 									aria-label="Warning example" aria-valuenow="75"
-									aria-valuemin="0" aria-valuemax="100" style="height: 25px;">
-									<div class="progress-bar bg-warning text-dark"
-										style="width: 75%"></div>
+									aria-valuemin="0" aria-valuemax="100">
+									<div class="progress-bar bg-warning text-dark progresvalue3"></div>
 								</div>
 							</div>
 
 							<div class="mt-3 ">
 								<span class="mt-4"><b>Send Inquiries</b></span> <span
-									style="float: right;"><b>250/500</b></span>
+									class="rightmost"><b>250/500</b></span>
 
-								<div class="progress" role="progressbar"
+								<div class="progress progresbarheight" role="progressbar"
 									aria-label="Danger eample" aria-valuenow="100"
-									aria-valuemin="0" aria-valuemax="100" style="height: 25px;">
-									<div class="progress-bar bg-danger" style="width: 100%"></div>
+									aria-valuemin="0" aria-valuemax="100" >
+									<div class="progress-bar bg-danger progresvalue4"></div>
 								</div>
 							</div>
 
@@ -484,17 +471,12 @@
 
 					<div class="row g-2 m-0">
 						<div class="col-md-8">
-							<div class="card"
-								style="box-shadow: 0 0 1px rgba(0, 0, 0, .125), 0 1px 3px rgba(0, 0, 0, .2);"
-								style="border-top-color: rgb(0, 110, 255); border-top: 15x;">
-
-								<div class="card-header"
-									style="display: grid; grid-template-columns: auto auto; background-color: white;">
-									<div class="card-title"
-										style="grid-column-start: 1; grid-column-end: 2;">
+							<div class="card recentlyaddedbox">
+								<div class="card-header recentlyaddedheaer">
+									<div class="card-title recentlyaddedcardtitle">
 										<b>Recently Added Usage</b>
 									</div>
-									<div class="card-tools" style="text-align: right;">
+									<div class="card-tools cardtools">
 										<button type="button" class="btn btn-tool "
 											data-bs-toggle="collapse" data-bs-target="">
 											<i class="bi bi-dash"></i>
@@ -508,11 +490,9 @@
 
 								<div class="card">
 									<div class="row g-0">
-										<div class="col-md-4 p-0"
-											style="text-align: center; max-width: 100px;">
-											<img src="images/tv.jpg" class="img-fluid " alt="..."
-												width="50" height="50"
-												style="padding-top: 12px; padding-bottom: 12px;">
+										<div class="col-md-4 p-0 recentlyaddedcarddiv">
+											<img src="images/tv.jpg" class="img-fluid productimg" alt="..."
+												width="50" height="50">
 										</div>
 										<div class="col-md-8">
 											<div>
@@ -532,11 +512,9 @@
 
 								<div class="card">
 									<div class="row g-0">
-										<div class="col-md-4 p-0"
-											style="text-align: center; max-width: 100px;">
-											<img src="images/bicycle.jpg" class="img-fluid " alt="..."
-												width="50" height="50"
-												style="padding-top: 12px; padding-bottom: 12px;">
+										<div class="col-md-4 p-0 recentlyaddedcarddiv">
+											<img src="images/bicycle.jpg" class="img-fluid productimg" alt="..."
+												width="50" height="50">
 										</div>
 										<div class="col-md-8">
 											<div>
@@ -555,11 +533,9 @@
 
 								<div class="card">
 									<div class="row g-0">
-										<div class="col-md-4 p-0"
-											style="text-align: center; max-width: 100px;">
-											<img src="images/xbox.jpg" class="img-fluid " alt="..."
-												width="50" height="50"
-												style="padding-top: 12px; padding-bottom: 12px;">
+										<div class="col-md-4 p-0 recentlyaddedcarddiv">
+											<img src="images/xbox.jpg" class="img-fluid productimg" alt="..."
+												width="50" height="50">
 										</div>
 										<div class="col-md-8">
 											<div>
@@ -578,11 +554,9 @@
 
 								<div class="card">
 									<div class="row g-0">
-										<div class="col-md-4 p-0"
-											style="text-align: center; max-width: 100px;">
-											<img src="images/ps4.jpg" class="img-fluid " alt="..."
-												width="50" height="50"
-												style="padding-top: 12px; padding-bottom: 12px;">
+										<div class="col-md-4 p-0 recentlyaddedcarddiv">
+											<img src="images/ps4.jpg" class="img-fluid productimg" alt="..."
+												width="50" height="50">
 										</div>
 										<div class="col-md-8">
 											<div>
@@ -599,7 +573,7 @@
 
 								</div>
 								<button class="btn">
-									<a class="text-primary" style="text-decoration: none;">View
+									<a class="text-primary viewproductbtn">View
 										All Products</a>
 								</button>
 							</div>
@@ -608,64 +582,49 @@
 
 						<div class="col-md-4">
 							<div
-								style="box-shadow: 0 0 1px rgba(0, 0, 0, .125), 0 1px 3px rgba(0, 0, 0, .2); display: flex; min-height: 80px; border: 1px solid rgba(0, 0, 0, .125); border-radius: 5px; margin-bottom: 10px; margin-top: 10px; position: reltaive; width: 100%">
+								class="sidecardsdiv">
 
 								<span
-									style="display: flex; justify-content: center; text-align: center; width: 80px; font-size: 30px; padding-top: 20px; background-color: #ffc107;">
-									<i class="bi bi-tag"
-									style="text-align: center; height: 40px; width: 40px;"></i>
+									class="inventorycolordiv">
+									<i class="bi bi-tag inventoryicon"></i>
 								</span>
 
 								<div
-									style="display: flex; flex-direction: column; flex: 1; padding: 5px 10px; overflow: hidden; background-color: #ffc107; align-items: left;">
+									class="inventorycontent">
 									<div class="card-title mt-2">INVENTORY</div>
 									<span><b>5,200</b></span>
 								</div>
 							</div>
 
-							<div
-								style="display: flex; border: 1px solid rgba(0, 0, 0, .125); border-radius: 5px; margin-bottom: 10px; box-shadow: 0 0 1px rgba(0, 0, 0, .125), 0 1px 3px rgba(0, 0, 0, .2); min-height: 80px; position: reltaive; width: 100%">
+							<div class="sidecardsdiv">
 
-								<span
-									style="display: flex; justify-content: center; text-align: center; width: 80px; font-size: 30px; padding-top: 20px; background-color: #28a745;">
-									<i class="bi bi-heart"
-									style="color: white; text-align: center; height: 30px; width: 30px;"></i>
+								<span class="mentionscolordiv">
+									<i class="bi bi-heart mentionsicon"></i>
 								</span>
 
-								<div
-									style="display: flex; flex-direction: column; flex: 1; padding: 5px 10px; overflow: hidden; background-color: #28a745; align-items: left;">
+								<div class="mentionscontent">
 									<div class="card-title text-white mt-2">MENTIONS</div>
 									<span class="text-white "><b>92,200</b></span>
 								</div>
 							</div>
 
-							<div
-								style="box-shadow: 0 0 1px rgba(0, 0, 0, .125), 0 1px 3px rgba(0, 0, 0, .2); display: flex; min-height: 80px; border: 1px solid rgba(0, 0, 0, .125); border-radius: 5px; margin-bottom: 10px; position: reltaive; width: 100%">
-
-								<span
-									style="display: flex; justify-content: center; text-align: center; width: 80px; font-size: 30px; padding-top: 20px; background-color: #dc3545;">
-									<i class="bi bi-cloud-arrow-down-fill"
-									style="color: white; text-align: center; height: 30px; width: 30px;"></i>
+							<div class="sidecardsdiv">
+								<span class="downloadscolordiv">
+									<i class="bi bi-cloud-arrow-down-fill downloadsicon"></i>
 								</span>
 
-								<div
-									style="display: flex; flex-direction: column; flex: 1; padding: 5px 10px; overflow: hidden; background-color: #dc3545; align-items: left;">
+								<div class="downloadcontentdiv">
 									<div class="card-title text-white mt-2">DOWNLOADS</div>
 									<span class="text-white  "><b>144,381</b></span>
 								</div>
 							</div>
 
-							<div
-								style="box-shadow: 0 0 1px rgba(0, 0, 0, .125), 0 1px 3px rgba(0, 0, 0, .2); display: flex; min-height: 80px; border: 1px solid rgba(0, 0, 0, .125); border-radius: 5px; margin-bottom: 10px; position: reltaive; width: 100%">
-
-								<span
-									style="display: flex; justify-content: center; text-align: center; width: 80px; font-size: 30px; padding-top: 20px; background-color: #17a2b8;">
-									<i class="bi bi-chat"
-									style="color: white; text-align: center; height: 30px; width: 30px;"></i>
+							<div class="sidecardsdiv">
+								<span class="directmsgdiv">
+									<i class="bi bi-chat directmsgicon"></i>
 								</span>
 
-								<div
-									style="display: flex; flex-direction: column; flex: 1; padding: 5px 10px; overflow: hidden; background-color: #17a2b8; align-items: left;">
+								<div class="directmsgcontent">
 									<div class="card-title text-white mt-2">DIRECT MESSAGES</div>
 									<span class="text-white  "><b>163,921</b></span>
 								</div>
@@ -675,15 +634,12 @@
 
 					<div class="row g-1 mt-0">
 						<div class="col-sm-8">
-							<div class="card"
-								style="box-shadow: 0 0 1px rgba(0, 0, 0, .125), 0 1px 3px rgba(0, 0, 0, .2);">
-								<h6 class="p-2 m-1"
-									style="background-color: white; font-size: 22px;">
+							<div class="card tablediv">
+								<h6 class="p-2 m-1 tableheading">
 									<b>Latest Orders</b>
 								</h6>
 								<div class="card-body ps-2">
-									<div class="table-responsive"
-										style="display: block; margin-bottom: 0px; width: 100%; overflow-x: auto;">
+									<div class="table-responsive tablebodydiv">
 										<table>
 											<thead>
 												<tr>
@@ -716,18 +672,17 @@
 													<td>Samsung Smart TV</td>
 													<td><span class="badge bg-danger">Delivered</span></td>
 													<td><div class="icongrid">
-															<div class="myicongreenbg" style="background-color:orange"></div>
-															<div class="myicongreen" style="background-color:orange"></div>
-															<div class="myicongreenbg" style="background-color:orange">
+															<div class="myiconorangebg"></div>
+															<div class="myiconorange"></div>
+															<div class="myiconorangebg">
 																<div class="myiconredbg"></div>
 															</div>
-															<div class="myicongreenbg" style="background-color:orange"></div>
+															<div class="myiconorangebg"></div>
 															<div class="myiconredbg"></div>
-															<div class="myicongreenbg" style="background-color:orange"></div>
+															<div class="myiconorangebg"></div>
 														</div></td>
 													</td>
 												</tr>
-
 
 
 												<tr>
@@ -735,14 +690,14 @@
 													<td>Iphone 16</td>
 													<td><span class="badge bg-warning">Pending</span></td>
 													<td><div class="icongrid">
-															<div class="myicongreenbg" style="background-color:orange"></div>
-															<div class="myicongreen" style="background-color:orange"></div>
-															<div class="myicongreenbg" style="background-color:orange">
+															<div class="myiconorangebg"></div>
+															<div class="myiconorange"></div>
+															<div class="myiconorangebg">
 																<div class="myiconredbg"></div>
 															</div>
-															<div class="myicongreenbg" style="background-color:orange"></div>
+															<div class="myiconorangebg"></div>
 															<div class="myiconredbg"></div>
-															<div class="myicongreenbg" style="background-color:orange"></div>
+															<div class="myiconorangebg"></div>
 														</div></td>
 												</tr>
 
@@ -751,14 +706,14 @@
 													<td>PlayStation 5</td>
 													<td><span class="badge bg-danger">Delivered</span></td>
 													<td><div class="icongrid">
-															<div class="myicongreenbg" style="background-color:orange"></div>
-															<div class="myicongreen" style="background-color:orange"></div>
-															<div class="myicongreenbg" style="background-color:orange">
+															<div class="myiconorangebg" ></div>
+															<div class="myiconorange" ></div>
+															<div class="myiconorangebg">
 																<div class="myiconredbg"></div>
 															</div>
-															<div class="myicongreenbg" style="background-color:orange"></div>
+															<div class="myiconorangebg"></div>
 															<div class="myiconredbg"></div>
-															<div class="myicongreenbg" style="background-color:orange"></div>
+															<div class="myiconorangebg"></div>
 														</div></td>
 												</tr>
 												
@@ -767,14 +722,14 @@
 													<td>MacBook M3</td>
 													<td><span class="badge bg-info">Processing</span></td>
 													<td><div class="icongrid">
-															<div class="myicongreenbg" style="background-color:#0dcaf0"></div>
-															<div class="myicongreen" style="background-color:#0dcaf0"></div>
-															<div class="myicongreenbg" style="background-color:#0dcaf0">
+															<div class="myiconbluebg"></div>
+															<div class="myiconblue" ></div>
+															<div class="myiconbluebg">
 																<div class="myiconredbg"></div>
 															</div>
-															<div class="myicongreenbg" style="background-color:#0dcaf0"></div>
+															<div class="myiconbluebg" ></div>
 															<div class="myiconredbg"></div>
-															<div class="myicongreenbg" style="background-color:#0dcaf0"></div>
+															<div class="myiconbluebg"></div>
 														</div></td>
 												</tr>
 
@@ -799,7 +754,7 @@
 											<button class="btn btn-primary">
 												<a>Place New Order</a>
 											</button>
-											<button class="btn btn-secondary" style="float: right;">
+											<button class="btn btn-secondary rightmost">
 												<a>View All Products</a>
 											</button>
 										</div>
@@ -807,16 +762,11 @@
 								</div>
 							</div>
 						</div>
-
-
 					</div>
 				</div>
 			</section>
 		</div>
 	</div>
 </body>
-
-
-
 
 </html>
